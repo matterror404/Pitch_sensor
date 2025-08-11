@@ -48,7 +48,7 @@ class MainActivity : Activity(), SensorEventListener {
                 val msg = "%.1f".format(latestPitchDeg).toByteArray()
                 val pkt = DatagramPacket(msg, msg.size, serverAddr, SERVER_PORT)
                 socket.send(pkt)
-                delay(150) //
+                delay(50) // Upload angle per 50 ms
             }
         }
     }
